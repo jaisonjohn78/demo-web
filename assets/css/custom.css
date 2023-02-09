@@ -1,0 +1,23 @@
+.upload-icon {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    cursor: grab;
+}
+
+.upload-icon:active {
+    cursor: grabbing;
+}
+
+
+@media (max-width: 768px) {
+
+    img.logo-light , img.logo-dark{
+        position: absolute !important;
+        left: 1px !important;
+        top: 18vh !important;
+        
+    }
+
+}
