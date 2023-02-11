@@ -1,14 +1,14 @@
 <?php
 
-$hostname = "localhost";
-$username = "root";
-$password = "";
-$database = "easyearn_master_db";
+// $hostname = "localhost";
+// $username = "root";
+// $password = "";
+// $database = "easyearn_master_db";
 
-// $hostname = "sql103.epizy.com";
-// $username = "epiz_31513890";
-// $password = "o8CWyaQlmJe";
-// $database = "epiz_31513890_database";
+$hostname = "sql103.epizy.com";
+$username = "epiz_31513890";
+$password = "o8CWyaQlmJe";
+$database = "u915512721_tdUyE";
 
 $conn = mysqli_connect($hostname, $username, $password, $database) or die("Database connection failed");
 
