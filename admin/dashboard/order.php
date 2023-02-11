@@ -1,4 +1,11 @@
-<?php include 'includes/header.html'; ?>
+<?php 
+
+include 'includes/header.html'; 
+include '../../html/includes/config.php';
+
+
+
+?>
 
 
 	<div class="main-container">
@@ -8,24 +15,24 @@
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>Orders</h4>
+								<h4>My Referral Code</h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Basic Tables</li>
+							
 								</ol>
 							</nav>
 						</div>
 						<div class="col-md-6 col-sm-12 text-right">
 							<div class="dropdown">
-								<a class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-									January 2018
+								
+								<a id="btnn" class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									Iosan
 								</a>
 								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#">Export List</a>
-									<a class="dropdown-item" href="#">Policies</a>
-									<a class="dropdown-item" href="#">View Assets</a>
+									<a class="dropdown-item" onclick="copy_code()">Copy to Clipboard</a>
+									<a class="dropdown-item" href="#">Copy link</a>
+									<a class="dropdown-item" href="#">Share</a>
 								</div>
 							</div>
 						</div>
@@ -37,23 +44,24 @@
 				<!-- Responsive tables Start -->
 				<div class="pd-20 card-box mb-30">
 					<div class="table-responsive">
+					<div class="title text-center">
+								<h4>My Referral</h4>
+							</div>	
 						<table class="table table-striped">
 							<thead>
 								<tr>
-									<th scope="col">Order id</th>
-									<th scope="col">Book Name</th>
-									<th scope="col">Username</th>
-									<th scope="col">Customer Name</th>
-                                             <th scope="col">Price</th>
-									<th scope="col">Quntity</th>
-                                             <th scope="col">Date</th>
-                                             <th scope="col">Order status</th>
-                                             <th scope="col">Payment status</th>
-                                             <th scope="col">Action</th>
+									<th scope="col">id</th>
+									<th scope="col">Referred to</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Returns</th>
+                                    <th scope="col">Timestamp</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
+
+
+								<!-- <tr>
 									<th scope="row">1</th>
 									<td>Born a crime</td>
 									<td>treverNoah</td>
@@ -63,42 +71,28 @@
 									<td>29/1/2023</td>
                                     <td><span class="badge badge-warning">Pending</span></td>
                                     <td><span class="badge badge-success">Success</span></td>
-									<td id="icon-td"><a href="order-edit.php"><i class="micon dw dw-pencil" id="edit-btn"></i></a>
-									<i class="micon dw dw-trash" id="delete-btn"></i></td>
-								</tr>
-								<tr>
-									<th scope="row">2</th>
-									<td>Theory of Everything</td>
-									<td>stevenHawking</td>
-									<td>Jenin</td>
-									<td>642</td>
-									<td>2</td>
-									<td>20/1/2023</td>
-                                             <td><span class="badge badge-success">Success</span></td>
-                                             <td><span class="badge badge-success">Success</span></td>
-											 <td id="icon-td"><a href="order-edit.php"><i class="micon dw dw-pencil" id="edit-btn"></i></a>
-									<i class="micon dw dw-trash" id="delete-btn"></i></td>
-								</tr>
-								<tr>
-									<th scope="row">3</th>
-									<td>Harry Potter</td>
-									<td>jkROwling</td>
-									<td>Pratyush</td>
-									<td>444</td>
-									<td>7</td>
-									<td>15/1/2023</td>
-                                             <td><span class="badge badge-danger">Cancelled</span></td>
-                                             <td><span class="badge badge-danger">Cancelled</span></td>
-											 <td id="icon-td"><a href="order-edit.php"><i class="micon dw dw-pencil" id="edit-btn"></i></a>
-									<i class="micon dw dw-trash" id="delete-btn"></i></td>
-								</tr>
+									
+								</tr> -->
+								
 								
 							</tbody>
 						</table>
+						<h2 class="text-center">No Record Found</h2>
 					</div>
 					
 				</div>
 				<!-- Responsive tables End -->			<!-- Contextual classes End -->
 			</div>
+
+
+
+
+			<script>
+				function copy_code() {
+					navigator.clipboard.writeText("<?php echo "hii";  ?>");
+					alert("Code Copied To Clipboard");
+				
+				}
+			</script>
 <?php include 'includes/footer.html'; ?>
 			

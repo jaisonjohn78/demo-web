@@ -11,10 +11,10 @@
                             <p>Non-Crypto and non-fungible tokens (NFTs). collectibles, Buy, sell, and discover exclusive digital items.</p>
                         </div>
                         <div class="col-lg-3 col-sm-6 my-3">
-                            <h5 class="footer-title-01">Marketplace</h5>
+                            <h5 class="footer-title-01">Others</h5>
                             <ul class="list-unstyled footer-link-01 m-0">
                                 <li>
-                                    <a class="link-white" href="../items/item-detail.php">All NFTs</a>
+                                    <a class="link-white" href="../items/item-detail.php">NFT (Comming Soon)</a>
                                 </li>
                                 <li>
                                     <a class="link-white" href="../account/profile.php">My Collection</a>
@@ -27,20 +27,20 @@
                             <h5 class="footer-title-01">Resources</h5>
                             <ul class="list-unstyled footer-link-01 m-0">
                                 <li>
-                                    <a class="link-white" href="#">Help Center</a>
+                                    <a class="link-white" href="../pages/contact.php">Help Center</a>
                                 </li>
                                 <li>
-                                    <a class="link-white" href="../pages/contact.html">Contact Us</a>
+                                    <a class="link-white" href="../pages/contact.php">Contact Us</a>
                                 </li>
                                 <li>
                                     <a class="link-white" href="../home/index.php">About Us</a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a class="link-white" href="#">Copyright</a>
-                                </li>
-                                <li>
+                                </li> -->
+                                <!-- <li>
                                     <a class="link-white" href="#">Terms & Policy </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                         <div class="col-lg-3 col-sm-6 my-3">
@@ -61,11 +61,11 @@
             <div class="container">
                 <div class="row py-3 gy-3 align-items-center">
                     <div class="col-md-6">
-                        <ul class="nav justify-content-center justify-content-md-start my-2 links-white small list-unstyled footer-link-01 m-0">
+                        <!-- <ul class="nav justify-content-center justify-content-md-start my-2 links-white small list-unstyled footer-link-01 m-0">
                             <li class="p-0 mx-3 ms-md-0 me-md-3"><a href="#" class="link-white">Privace &amp; Policy</a></li>
                             <li class="p-0 mx-3 ms-md-0 me-md-3"><a href="#" class="link-white">Faq's</a></li>
                             <li class="p-0 mx-3 ms-md-0 me-md-3"><a href="#" class="link-white">Get a Quote</a></li>
-                        </ul>
+                        </ul> -->
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <p class="text-white-85 small m-0">Made with Love ❤ for NFT Enthusiasts</a></p>
@@ -100,6 +100,8 @@
     <script src="../../assets/vendor/mail/js/script.js"></script>
     <!-- Theme Js -->
     <script src="../../assets/js/custom.js"></script>
+    <script src="../../assets/lottie/lottie-player.js"></script>
+
 </body>
 <!-- end body -->
 

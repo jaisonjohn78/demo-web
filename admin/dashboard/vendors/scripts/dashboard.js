@@ -281,11 +281,11 @@ var options4 = {
 var options5 = {
 	series: [{
 		name: 'Servings',
-		data: [44, 55, 41, 67, 5, 43, 21, 33, 45, 31, 87, 65]
+		data: [0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0]
 	  }],
 		annotations: {
 		points: [{
-		  x: 'May',
+		  x: 'Feb',
 		  seriesIndex: 0,
 		  label: {
 			borderColor: '#775DD0',
@@ -294,7 +294,7 @@ var options5 = {
 			  color: '#fff',
 			  background: '#775DD0',
 			},
-			text: 'Holiday',
+			text: 'Today',
 		  }
 		}]
 	  },

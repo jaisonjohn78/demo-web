@@ -99,6 +99,8 @@
                 </div>
             </div>
             <!-- End Section -->
+            <div class="left-effects d-none d-lg-block"></div>
+            <div class="right-effects d-none d-lg-block"></div>
         </main>
         <!-- End Main -->
         <?php include '../includes/footer.php'; ?>

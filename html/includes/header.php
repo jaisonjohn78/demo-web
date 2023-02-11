@@ -14,7 +14,6 @@
     <!-- Favicon -->
     <!-- CSS Template -->
     <link href="../../assets/css/style.css" rel="stylesheet">
-    <script src="../../assets/lottie/lottie-player.js"></script>
 
     <link href="../../assets/css/custom.css" rel="stylesheet">
 </head>
@@ -37,9 +36,10 @@
 
 
 
-    <a href="../account/new-item.php"><div class="upload-icon">
-        <lottie-player src="../../assets/lottie/lf30_iyicd2xy.json" mode="bounce" background="transparent"  speed="1"  style="width: 75px; height: 75px;"  loop  autoplay></lottie-player>
-    </div></a>  
+    <!-- <a href="../account/refferal.php" class="upload-icon">
+        
+<lottie-player src="https://assets1.lottiefiles.com/packages/lf20_S17g0Q860p.json"  background="transparent"  speed="1"  style="width: 85px; height: 85px;"  loop  autoplay></lottie-player>
+    </div></a>   -->
 
 
 
@@ -61,7 +61,7 @@
                     <!-- Logo -->
                     <!-- Menu -->
                     <div class="collapse navbar-collapse ps-xl-5" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto">
+                        <ul class="navbar-nav me-auto ms-auto">
                             <li class="nav-item">
                                 <a href="../home/index.php" class="nav-link">
                                     Home
@@ -69,8 +69,8 @@
                                 
                             </li>
                             <li class="nav-item">
-                                <a href="../explore/explore-2023.php" class="nav-link">
-                                    Explore <span class="h-menu-lable" >NEW  </span>
+                                <a href="../home/index.php#packages" class="nav-link">
+                                    Packages <span class="h-menu-lable" >NEW  </span>
                                 </a>
                                 
                             </li>
@@ -78,8 +78,16 @@
                                 <a href="../pages/contact.php" class="nav-link">Contact</a>
                                 
                             </li>
+
+                            <li class="nav-item">
+                                <a href="../account/login.php" class="nav-link">Login</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="../account/sign-up.php" class="nav-link">Register</a>
+                            </li>
                             
-                            <li class="nav-item dropdown">
+                            <!-- <li class="nav-item dropdown">
                                 <a href="#" class="nav-link">Account</a>
                                 <label class="px-dropdown-toggle mob-menu bi bi-chevron-down"></label>
                                 <div class="dropdown-menu left">
@@ -90,7 +98,7 @@
                                         <li><a class="dropdown-item" href="../account/forget-password.php">Forget Password</a></li>
                                     </ul>
                                 </div>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="header-end d-flex justify-content-center justify-content-md-end">
@@ -102,33 +110,7 @@
                             </button>
                         </div>
                         
-                        <!-- Creat-->
-                        <div class="h-col h-create">
-                            <a class="h-create-btn" href="../account/login.html">Sign Up</a>
-                        </div>
-                        <!-- User -->
-                        <div class="h-col h-user dropdown">
-                            <button class="h-user-icon dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img title="" alt="" src="../../assets/img/avatar-1.jpg">
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <div class="h-user-name">
-                                    <h6>Nancy Pelosi</h6>
-                                    <small>AC: #323232</small>
-                                </div>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#"><i class="bi bi-person"></i> My Account</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="bi bi-gear"></i> Edit Account</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="bi bi-lock"></i> Log Out</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        
 
                     </div>
                 </div>
