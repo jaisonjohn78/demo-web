@@ -1,10 +1,17 @@
 <?php 
-
-include 'includes/header.html'; 
 include '../../html/includes/config.php';
 
+session_start();
+
+  
+$user_id = $_SESSION['user_id'];
+
+$user_info = mysqli_query($conn, "SELECT * FROM `master_user_tb` WHERE id='$user_id'");
+$row = mysqli_fetch_assoc($user_info);
 
 
+
+include 'includes/header.html'; 
 ?>
 
 

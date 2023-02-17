@@ -7,13 +7,31 @@ if (isset($_POST["login"])) {
     $password = mysqli_real_escape_string($conn, md5($_POST["password"]));
   
     $check_email = mysqli_query($conn, "SELECT id FROM `master_user_tb` WHERE email='$email' AND password='$password' AND status='0'");
-  
+    $payment_check = mysqli_query($conn, "SELECT id FROM `master_user_tb` WHERE payment='pending'");
+    
+
+ 
+
     if (mysqli_num_rows($check_email) > 0) {
-      $row = mysqli_fetch_assoc($check_email);
-      
+    $row = mysqli_fetch_assoc($check_email);
     session_start();
-      $_SESSION["user_id"] = $row['id'];
-      echo "<script>window.location.href = '../../admin/dashboard/index.php';</script>";
+    $_SESSION["user_id"] = $row['id'];
+    
+            if ($row['payment'] == "pending"){
+                echo "<script>alert('Payment Still Pending, Please check with your bank or Register with a new start');</script>";
+                echo "<script>window.location.href = 'payment.php';</script>";
+                
+            } else {
+                if($row['payment'] == "success"){
+                    echo "<script>window.location.href = '../../admin/dashboard/index.php';</script>";
+                } else {
+                    echo "<script>window.location.href = 'payment.php';</script>";
+                }
+            
+            
+            }
+
+      
     } else {
       echo "<script>alert('Login details is incorrect. Please try again.');</script>";
     }
