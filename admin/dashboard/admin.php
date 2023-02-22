@@ -59,8 +59,14 @@ include 'includes/header.html';
 								<div id="chart"></div>
 							</div>
 							<div class="widget-data">
-								<div class="h4 mb-0"><?php echo "₹ " . $row['earned']; ?></div>
-								<div class="weight-600 font-14">Total Earning</div>
+								<div class="h4 mb-0 "><?php 
+                                    $sql = "SELECT COUNT(id) FROM master_user_tb";
+                                    $result = mysqli_query($conn,$sql);
+                                    $rows = mysqli_fetch_row($result);
+                                    echo $rows[0];
+                                
+                                ?></div>
+								<div class="weight-600 font-14">Total Users</div>
 							</div>
 						</div>
 					</div>
@@ -69,11 +75,30 @@ include 'includes/header.html';
 					<div class="card-box height-100-p widget-style1">
 						<div class="d-flex flex-wrap align-items-center">
 							<div class="progress-data">
+								<div id="chart3"></div>
+							</div>
+							<div class="widget-data">
+								<div class="h4 mb-0"><?php 
+                                    $sql2 = "SELECT COUNT(id) FROM master_user_tb WHERE payment='success'";
+                                    $result2 = mysqli_query($conn,$sql2);
+                                    $rows2 = mysqli_fetch_row($result2);
+                                    echo $rows2[0];
+                                ?></div>
+								<div class="weight-600 font-14">Payment Completed</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <div class="col-xl-3 mb-30">
+					<div class="card-box height-100-p widget-style1">
+						<div class="d-flex flex-wrap align-items-center">
+							<div class="progress-data">
 								<div id="chart2"></div>
 							</div>
 							<div class="widget-data">
 								<div class="h4 mb-0"><?php echo "₹ " . $row['withdraw']; ?></div>
-								<div class="weight-600 font-14">Withdrawn</div>
+								<div class="weight-600 font-14">Market Value</div>
 							</div>
 						</div>
 					</div>
@@ -92,7 +117,7 @@ include 'includes/header.html';
 										get_package($package);
 									?>
 								</div>
-								<div class="weight-600 font-14">Package</div>
+								<div class="weight-600 font-14">Total Sales</div>
 							</div>
 						</div>
 					</div>

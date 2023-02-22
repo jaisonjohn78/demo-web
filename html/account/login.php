@@ -16,20 +16,27 @@ if (isset($_POST["login"])) {
     $row = mysqli_fetch_assoc($check_email);
     session_start();
     $_SESSION["user_id"] = $row['id'];
+    if($row['status'] == "0"){
+        echo "<script>window.location.href = '../../admin/dashboard/admin.php';</script>";
+    }
+    echo "<script>window.location.href = '../../admin/dashboard/index.php';</script>";
+
     
-            if ($row['payment'] == "pending"){
-                echo "<script>alert('Payment Still Pending, Please check with your bank or Register with a new start');</script>";
-                echo "<script>window.location.href = 'payment.php';</script>";
+            // if ($row['payment'] == "pending"){
+            //     echo "<script>alert('Payment Still Pending, Please check with your bank or Register with a new start');</script>";
+            //     echo "<script>window.location.href = 'payment.php';</script>";
                 
-            } else {
-                if($row['payment'] == "success"){
-                    echo "<script>window.location.href = '../../admin/dashboard/index.php';</script>";
-                } else {
-                    echo "<script>window.location.href = 'payment.php';</script>";
-                }
+            // } else {
+            //     if($row['payment'] == "success"){
+            //         echo "<script>window.location.href = '../../admin/dashboard/index.php';</script>";
+            //     } else {
+            //         echo "<script>window.location.href = 'payment.php';</script>";
+            //     }
             
             
-            }
+            // }
+
+            
 
       
     } else {

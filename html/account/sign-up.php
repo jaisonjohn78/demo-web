@@ -86,16 +86,16 @@ if (isset($_POST["signup"])) {
                                             <label class="form-label">Package</label>
                                             <select name="Pack" class="form-control" id="pack_select">
                                                 <option value="" selected disabled>Select a package</option>
-                                                <option value="pack1" id="pack1">Package 1 - ₹ 199</option>
-                                                <option value="pack2" id="pack2">Package 2 - ₹ 399</option>
-                                                <option value="pack3" id="pack3">Package 3 - ₹ 799</option>
-                                                <option value="pack4" id="pack4">Package 4 - ₹ 1,599</option>
-                                                <option value="pack5" id="pack5">Package 5 - ₹ 3,199</option>
-                                                <option value="pack6" id="pack6">Package 6 - ₹ 6,399</option>
-                                                <option value="pack7" id="pack7">Package 7 - ₹ 12,799</option>
-                                                <option value="pack8" id="pack8">Package 8 - ₹ 25,599</option>
-                                                <option value="pack9" id="pack9">Package 9 - ₹ 51,199</option>
-                                                <option value="pack10" id="pack10">Package 10 - ₹ 1,02,399</option>
+                                                <option value="package 1" id="pack1">Package 1 - ₹ 199</option>
+                                                <option value="package 2" id="pack2">Package 2 - ₹ 399</option>
+                                                <option value="package 3" id="pack3">Package 3 - ₹ 799</option>
+                                                <option value="package 4" id="pack4">Package 4 - ₹ 1,599</option>
+                                                <option value="package 5" id="pack5">Package 5 - ₹ 3,199</option>
+                                                <option value="package 6" id="pack6">Package 6 - ₹ 6,399</option>
+                                                <option value="package 7" id="pack7">Package 7 - ₹ 12,799</option>
+                                                <option value="package 8" id="pack8">Package 8 - ₹ 25,599</option>
+                                                <option value="package 9" id="pack9">Package 9 - ₹ 51,199</option>
+                                                <option value="package 10" id="pack10">Package 10 - ₹ 1,02,399</option>
 
                                             </select>
                                         </div>
