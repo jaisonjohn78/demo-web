@@ -113,7 +113,7 @@ if (isset($_POST["signup"])) {
                                             </label>
                                         </div>
                                         <div class="pb-3">
-                                            <input id="submit" type="submit" name="signup" class="w-100 btn btn-primary" value="Create Account" disabled>
+                                            <input id="submit" type="submit" name="signup" class="w-100 btn btn-primary" value="Create Account" >
                                         </div>
                                         <div class="text-center"><small>Already have an acocunt?</small> <a href="login.php" class="small font-weight-bold">Login</a></div>
                                     </form>
