@@ -1,6 +1,6 @@
 <?php
 include '../includes/config.php';
-include '../includes/package.php';
+include_once '../includes/package.php';
 session_start();
 $id = $_SESSION["user_id"];
 $date = date('Y-m-d H:i:s');
@@ -291,7 +291,7 @@ input.card {
                     <div class="h8">
                         <div class="row m-0 border mb-3">
                             <div class="col-6 h8 pe-0 ps-2">
-                                <p class="textmuted py-2">Items</p> <span class="d-block py-2 border-bottom">Package <?php echo $_GET['pack'] ?></span> <span class="d-block py-2"></span>
+                                <p class="textmuted py-2">Items</p> <span class="d-block py-2 border-bottom"><?php echo $pack ?></span> <span class="d-block py-2"></span>
                             </div>
 
                             <div class="col-3 p-0 text-center h8 border-end">
