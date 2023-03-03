@@ -5,36 +5,36 @@ session_start();
 $id = $_SESSION["user_id"];
 $date = date('Y-m-d H:i:s');
 // $_GET["pack"] = "";
-if ($_GET["pack"] == 1) {
-    $pack_rs = "199";
-}
-if ($_GET["pack"] == 2) {
-    $pack_rs = "399";
-}
-if ($_GET["pack"] == 3) {
-    $pack_rs = "799";
-}
-if ($_GET["pack"] == 4) {
-    $pack_rs = "1,599";
-}
-if ($_GET["pack"] == 5) {
-    $pack_rs = "3,199";
-}
-if ($_GET["pack"] == 6) {
-    $pack_rs = "6,399";
-}
-if ($_GET["pack"] == 7) {
-    $pack_rs = "12,799";
-}
-if ($_GET["pack"] == 8) {
-    $pack_rs = "25,599";
-}
-if ($_GET["pack"] == 9) {
-    $pack_rs = "51,199";
-}
-if ($_GET["pack"] == 10) {
-    $pack_rs = "1,02,399";
-}
+// if ($_GET["pack"] == 1) {
+//     $pack_rs = "199";
+// }
+// if ($_GET["pack"] == 2) {
+//     $pack_rs = "399";
+// }
+// if ($_GET["pack"] == 3) {
+//     $pack_rs = "799";
+// }
+// if ($_GET["pack"] == 4) {
+//     $pack_rs = "1,599";
+// }
+// if ($_GET["pack"] == 5) {
+//     $pack_rs = "3,199";
+// }
+// if ($_GET["pack"] == 6) {
+//     $pack_rs = "6,399";
+// }
+// if ($_GET["pack"] == 7) {
+//     $pack_rs = "12,799";
+// }
+// if ($_GET["pack"] == 8) {
+//     $pack_rs = "25,599";
+// }
+// if ($_GET["pack"] == 9) {
+//     $pack_rs = "51,199";
+// }
+// if ($_GET["pack"] == 10) {
+//     $pack_rs = "1,02,399";
+// }
 
 $user_info = mysqli_query($conn, "SELECT * FROM `master_user_tb` WHERE id='$id'");
 $row = mysqli_fetch_assoc($user_info);

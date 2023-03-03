@@ -15,7 +15,7 @@ if (isset($_POST["login"])) {
     if (mysqli_num_rows($check_email) > 0) {
     $row = mysqli_fetch_assoc($check_email);
     session_start();
-    echo "<script>window.location.href = 'payment.php';</script>";
+    echo "<script>window.location.href = 'upload.php';</script>";
 
 
     
