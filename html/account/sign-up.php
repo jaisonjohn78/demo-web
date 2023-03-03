@@ -35,7 +35,9 @@ if (isset($_POST["signup"])) {
       $result = mysqli_query($conn, $sql);
     
       if ($result && $flag == 0) {
-        echo "<script>alert('Registration successful.');</script>";
+        echo "<script>alert('Registration successful.');";
+        echo "window.location.href = 'login.php';</script>";
+
       } else {
         echo "<script>alert('Registration failed.');</script>";
     }
@@ -71,8 +73,8 @@ if (isset($_POST["signup"])) {
                                             <input type="text" name="Email" class="form-control" placeholder="name@example.com" required>
                                         </div>
                                         <div class="pb-3">
-                                            <label class="form-label">Mobile Number</label>
-                                            <input type="text" name="Tel" class="form-control" placeholder="918693018540" required pattern="^\d{2}\d{10}$">
+                                            <label class="form-label">Mobile Number </label>
+                                            <input type="text" name="Tel" class="form-control" placeholder="91 8888888888" required pattern="^\d{2}\d{10}$">
                                         </div>
                                         <div class="pb-3">
                                             <label class="form-label">Password</label>

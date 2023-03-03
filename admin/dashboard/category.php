@@ -11,8 +11,8 @@
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index.html">10</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Packages</li>
+									<li class="breadcrumb-item">You Have ₹</li>
+									<li class="breadcrumb-item active" aria-current="page"><a href="withdraw-upload.php">withdraw Now</a></li>
 								</ol>
 							</nav>
 						</div>
@@ -51,6 +51,12 @@
 					
 				</div>
 				<!-- Responsive tables End -->			<!-- Contextual classes End -->
+			</div>
+
+			<div class="pd-20 card-box mb-30">
+
+
+
 			</div>
 <?php include 'includes/footer.html'; ?>
 			

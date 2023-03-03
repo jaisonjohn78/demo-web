@@ -10,7 +10,7 @@
     <meta name="keywords" content="EasyEarn in | Learn - Discover, find, Sell extraordinary NFTs" />
     <meta name="description" content="EasyEarn in | Learn - Discover, find, Sell extraordinary NFTs" />
     <!-- title -->
-    <title>EasyEarn.in | Learn - Discover, find, Sell extraordinary NFTs</title>
+    <title>EasyEarn.in | Share Reffer and Earn</title>
     <!-- Favicon -->
     <!-- CSS Template -->
     <link href="../../assets/css/style.css" rel="stylesheet">

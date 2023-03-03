@@ -6,7 +6,7 @@ if (isset($_POST["login"])) {
     $email = mysqli_real_escape_string($conn, $_POST["email"]);
     $password = mysqli_real_escape_string($conn, md5($_POST["password"]));
   
-    $check_email = mysqli_query($conn, "SELECT id FROM `master_user_tb` WHERE email='$email' AND password='$password' AND status='0'");
+    $check_email = mysqli_query($conn, "SELECT * FROM `master_user_tb` WHERE email='$email' AND password='$password' AND status='0'");
     $payment_check = mysqli_query($conn, "SELECT id FROM `master_user_tb` WHERE payment='pending'");
     
 
@@ -15,11 +15,8 @@ if (isset($_POST["login"])) {
     if (mysqli_num_rows($check_email) > 0) {
     $row = mysqli_fetch_assoc($check_email);
     session_start();
-    $_SESSION["user_id"] = $row['id'];
-    if($row['status'] == "0"){
-        echo "<script>window.location.href = '../../admin/dashboard/admin.php';</script>";
-    }
-    echo "<script>window.location.href = '../../admin/dashboard/index.php';</script>";
+    echo "<script>window.location.href = 'payment.php';</script>";
+
 
     
             // if ($row['payment'] == "pending"){
