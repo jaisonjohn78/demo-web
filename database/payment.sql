@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2023 at 04:54 AM
+-- Generation Time: Mar 12, 2023 at 12:07 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -33,7 +33,7 @@ CREATE TABLE `payment` (
   `pack` varchar(255) NOT NULL,
   `amount` int(11) NOT NULL,
   `path` varchar(255) NOT NULL,
-  `status` varchar(255) NOT NULL,
+  `status` int(11) NOT NULL DEFAULT 0,
   `timestamp` varchar(255) NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

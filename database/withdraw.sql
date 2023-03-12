@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2023 at 12:05 PM
+-- Generation Time: Mar 12, 2023 at 12:07 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -24,26 +24,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_user_tb`
+-- Table structure for table `withdraw`
 --
 
-CREATE TABLE `master_user_tb` (
+CREATE TABLE `withdraw` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `mobile` varchar(50) NOT NULL,
-  `earned` int(11) NOT NULL DEFAULT 0,
-  `withdraw` int(11) NOT NULL DEFAULT 0,
-  `balance` int(11) NOT NULL DEFAULT 0,
-  `password` varchar(255) NOT NULL,
-  `pack` varchar(255) NOT NULL,
-  `OTP` varchar(255) DEFAULT '0',
-  `timestamp` varchar(255) NOT NULL DEFAULT current_timestamp(),
-  `referral_code` varchar(255) NOT NULL,
-  `refers` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `w_id` int(11) NOT NULL,
+  `acc_no` varchar(255) NOT NULL,
+  `UPI` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `amount` varchar(255) NOT NULL,
   `status` int(11) NOT NULL DEFAULT 0,
-  `payment` varchar(50) NOT NULL DEFAULT 'pending',
-  `level` int(11) NOT NULL DEFAULT 1
+  `timestamp` varchar(255) NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -51,20 +44,19 @@ CREATE TABLE `master_user_tb` (
 --
 
 --
--- Indexes for table `master_user_tb`
+-- Indexes for table `withdraw`
 --
-ALTER TABLE `master_user_tb`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `referral_code` (`referral_code`);
+ALTER TABLE `withdraw`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `master_user_tb`
+-- AUTO_INCREMENT for table `withdraw`
 --
-ALTER TABLE `master_user_tb`
+ALTER TABLE `withdraw`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2023 at 12:05 PM
+-- Generation Time: Mar 12, 2023 at 12:07 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -24,26 +24,17 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_user_tb`
+-- Table structure for table `history`
 --
 
-CREATE TABLE `master_user_tb` (
+CREATE TABLE `history` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `mobile` varchar(50) NOT NULL,
-  `earned` int(11) NOT NULL DEFAULT 0,
-  `withdraw` int(11) NOT NULL DEFAULT 0,
-  `balance` int(11) NOT NULL DEFAULT 0,
-  `password` varchar(255) NOT NULL,
-  `pack` varchar(255) NOT NULL,
-  `OTP` varchar(255) DEFAULT '0',
+  `r_id` varchar(255) NOT NULL,
+  `package` varchar(255) NOT NULL,
+  `returns` varchar(255) NOT NULL,
+  `percent` varchar(255) NOT NULL,
   `timestamp` varchar(255) NOT NULL DEFAULT current_timestamp(),
-  `referral_code` varchar(255) NOT NULL,
-  `refers` int(11) NOT NULL,
-  `status` int(11) NOT NULL DEFAULT 0,
-  `payment` varchar(50) NOT NULL DEFAULT 'pending',
-  `level` int(11) NOT NULL DEFAULT 1
+  `status` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -51,21 +42,20 @@ CREATE TABLE `master_user_tb` (
 --
 
 --
--- Indexes for table `master_user_tb`
+-- Indexes for table `history`
 --
-ALTER TABLE `master_user_tb`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `referral_code` (`referral_code`);
+ALTER TABLE `history`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `master_user_tb`
+-- AUTO_INCREMENT for table `history`
 --
-ALTER TABLE `master_user_tb`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `history`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
