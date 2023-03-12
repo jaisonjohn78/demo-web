@@ -96,7 +96,7 @@ include_once '../includes/header.php';
                             <!-- <a class="btn btn-primary-soft btn-sm ms-auto" href="#">View All <i class="bi bi-arrow-right ms-1"></i> </a> -->
                         </div>
                     </div>
-                    <div class="row g-3">
+                    <div class="row g-3" style="justify-content: center;">
 
                     <!-- packages  -->
                         <div class="col-sm-6 col-lg-3">
@@ -540,7 +540,7 @@ include_once '../includes/header.php';
             </section>
             <!-- End Section -->
             <!-- Section -->
-            <section class="section pt-lg-0">
+            <!-- <section class="section pt-lg-0">
                 <div class="container">
                     <div class="row section-heading">
                         <div class="col-lg-5">
@@ -574,7 +574,7 @@ include_once '../includes/header.php';
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- End Section -->
            
             <!-- Section -->

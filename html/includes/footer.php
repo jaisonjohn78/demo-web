@@ -68,7 +68,7 @@
                         </ul> -->
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <p class="text-white-85 small m-0">Made with Love ❤ for NFT Enthusiasts</a></p>
+                        <p class="text-white-85 small m-0">easyearnfoundation@gmail.com</a></p>
                     </div>
                 </div>
             </div>

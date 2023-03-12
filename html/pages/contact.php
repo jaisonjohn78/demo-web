@@ -55,7 +55,7 @@
                 <div class="container">
                     <div class="border border-gray-200 position-relative bg-body rounded-3 z-index-1">
                         <div class="row separated">
-                            <div class="col-lg-3 col-sm-6">
+                            <div class="col-lg-4 col-sm-6">
                                 <div class="py-5 text-center">
                                     <div class="icon-lg bg-primary-soft text-primary rounded-circle mb-4">
                                         <i class="fs-4 bi bi-map"></i>
@@ -63,7 +63,7 @@
                                     <h6 class="m-0">New York, NY 92103, USA</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-sm-6">
+                            <div class="col-lg-4 col-sm-6">
                                 <div class="py-5 text-center">
                                     <div class="icon-lg bg-primary-soft text-primary rounded-circle mb-4">
                                         <i class="fs-4 bi bi-phone"></i>
@@ -71,22 +71,22 @@
                                     <h6 class="m-0">1-800-222-000</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-sm-6">
+                            <div class="col-lg-4 col-sm-6">
                                 <div class="py-5 text-center">
                                     <div class="icon-lg bg-primary-soft text-primary rounded-circle mb-4">
                                         <i class="fs-4 bi bi-envelope"></i>
                                     </div>
-                                    <h6 class="m-0">info@domain.com</h6>
+                                    <h6 class="m-0">easyearnfoundation@gmail.com</h6>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-sm-6">
+                            <!-- <div class="col-lg-3 col-sm-6">
                                 <div class="py-5 text-center">
                                     <div class="icon-lg bg-primary-soft text-primary rounded-circle mb-4">
                                         <i class="fs-4 bi bi-map"></i>
                                     </div>
                                     <h6 class="m-0">1800 302 2302</h6>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

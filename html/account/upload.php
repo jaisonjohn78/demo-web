@@ -1,8 +1,14 @@
 <?php
+session_start();
 include '../includes/config.php';
 include_once '../includes/package.php';
-session_start();
-$id = $_SESSION["user_id"];
+
+error_reporting(0);
+
+
+if(isset($_SESSION["user_id"])) {
+    $id = $_SESSION["user_id"];
+}
 $date = date('Y-m-d H:i:s');
 // $_GET["pack"] = "";
 // if ($_GET["pack"] == 1) {
@@ -41,6 +47,7 @@ $row = mysqli_fetch_assoc($user_info);
 
 $pack = $row['pack'];
 $payAmount = get_package($pack);
+$payAmount_txt = $tmp_name;
 
 
 if(isset($_POST['uploadfile'])){
@@ -54,7 +61,7 @@ if(isset($_POST['uploadfile'])){
       echo "<script>alert('Failed to upload image');</script>";
 
 }
-    $query = mysqli_query($conn, "INSERT INTO `payment`( `pack`, `amount`, `path`, `status`) VALUES ('$pack','$payAmount', '$folder', 0)");
+    $query = mysqli_query($conn, "INSERT INTO `payment`(`user_id`,`pack`, `amount`, `path`) VALUES ('$id','$pack','$payAmount_txt', '$folder')");
     
 
 }
@@ -220,10 +227,48 @@ input.card {
         font-size: 10px
     }
 }
+
+.bg-notification {
+    background-color: #d4f8f2;
+    text-align: center;
+    color: #06e67a;
+    padding: 3px 0;
+    display: inlne;
+    border-radius: 25px;
+    font-size: 11px;
+    padding: 1rem;
+}
     </style>
 </head>
-
 <body>
+
+<?php
+$paymentcheck = "SELECT * FROM `payment` WHERE `user_id` = '$id'";
+$paymentcheckquery = mysqli_query($conn, $paymentcheck);
+$paymentcheckrow = mysqli_fetch_assoc($paymentcheckquery);
+
+if($paymentcheckquery){
+    if($paymentcheckrow['status'] == 1){
+    echo "<script>window.location.href = '../../admin/dashboard/index.php';</script>";
+
+        
+    }
+    if(!isset($paymentcheckrow['status'])){
+        echo "";
+    }else{
+?>
+<div class="container bg-notification" >
+    <div class="row">
+        
+            <h1>successfully Recorded</h1>
+            <p>Please wait for approval and try login again</p>
+        
+    </div>
+</div>
+<?php
+}
+}
+?>
     <form method="POST" action="" enctype="multipart/form-data">
     <div class="container">
         <div class="row m-0">

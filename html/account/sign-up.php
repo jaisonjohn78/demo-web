@@ -15,17 +15,17 @@ if (isset($_POST["signup"])) {
     $password = mysqli_real_escape_string($conn, md5($_POST["Epassword"]));
     $cpassword = mysqli_real_escape_string($conn, md5($_POST["Cpassword"]));
     $package = mysqli_real_escape_string($conn, $_POST["Pack"]);
-    $referred = mysqli_real_escape_string($conn, $_POST["refer"]);
+    $referred = $_POST["refer"];
     $referral_code = substr(str_shuffle("0123456789aceftQWERTYUIOPASDFGHJKLZXCVBNM"), 0, 6);
   
     $check_email = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `master_user_tb` WHERE email='$email'"));
     $check_refer = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `master_user_tb` WHERE referral_code='$referred'"));
     $flag = 0;
     if($check_refer == 0 && $_POST["refer"] != ""){
-      echo "<script>alert('Referral Code is Invalid !!');</script>";
-      $flag = 1;
+        $flag = 1;
+        echo "<script>alert('Referral Code is Invalid !!');</script>";
     }
-    if ($password != $cpassword) {
+    elseif ($password != $cpassword) {
         echo "<script>alert('Password did not match.');</script>";
        
     } elseif ($check_email > 0) {
@@ -35,8 +35,8 @@ if (isset($_POST["signup"])) {
       $result = mysqli_query($conn, $sql);
     
       if ($result && $flag == 0) {
-        echo "<script>alert('Registration successful.');";
-        echo "window.location.href = 'login.php';</script>";
+        echo "<script>alert('Registration successful.');</script>";
+        // echo "window.location.href = 'login.php';</script>";
 
       } else {
         echo "<script>alert('Registration failed.');</script>";
@@ -74,7 +74,10 @@ if (isset($_POST["signup"])) {
                                         </div>
                                         <div class="pb-3">
                                             <label class="form-label">Mobile Number </label>
-                                            <input type="text" name="Tel" class="form-control" placeholder="91 8888888888" required pattern="^\d{2}\d{10}$">
+                                            <div class="input-group-prepend" style="display: flex;align-items: center;">
+                                                <span class="input-group-text" style="margin-right: 0.2rem;">+91</span>
+                                                <input type="text" name="Tel" class="form-control" placeholder="8888888888" required pattern="^\d{10}$">
+                                            </div>
                                         </div>
                                         <div class="pb-3">
                                             <label class="form-label">Password</label>

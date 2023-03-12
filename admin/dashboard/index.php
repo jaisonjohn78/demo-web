@@ -1,8 +1,8 @@
 <?php 
+session_start();
 include '../../html/includes/config.php';
 include_once '../../html/includes/package.php';
 
-session_start();
 
 if(!isset($_SESSION["user_id"])){
 	header("Location: ../../html/account/login.php");
@@ -34,11 +34,8 @@ include 'includes/header.html';
 						<p class="font-18 max-width-600 align-right">
 							<?php
 
-							if($row['payment'] == "pending") {
-								echo "<b style='color:red'>Payment pending .. <br><a href='payment-gateway.php' style='color:red'>click here</a> to proceed</b>";
-							} else {
-								echo "Your Network: " . $row['refers'];
-							}
+								echo "Your Balance: " . $row['balance'];
+							
 
 							
 
@@ -52,7 +49,7 @@ include 'includes/header.html';
 
 
 			<div class="row">
-				<div class="col-xl-3 mb-30">
+				<div class="col-xl-4 mb-30">
 					<div class="card-box height-100-p widget-style1">
 						<div class="d-flex flex-wrap align-items-center">
 							<div class="progress-data">
@@ -65,7 +62,7 @@ include 'includes/header.html';
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-3 mb-30">
+				<div class="col-xl-4 mb-30">
 					<div class="card-box height-100-p widget-style1">
 						<div class="d-flex flex-wrap align-items-center">
 							<div class="progress-data">
@@ -79,7 +76,7 @@ include 'includes/header.html';
 					</div>
 				</div>
 				
-				<div class="col-xl-3 mb-30">
+				<div class="col-xl-4 mb-30">
 					<div class="card-box height-100-p widget-style1">
 						<div class="d-flex flex-wrap align-items-center">
 							<div class="progress-data">
@@ -88,11 +85,11 @@ include 'includes/header.html';
 							<div class="widget-data">
 								<div class="h4 mb-0">
 									<?php
-										$package = $row['pack'];
-										get_package($package);
+										echo $row['refers'];
+										
 									?>
 								</div>
-								<div class="weight-600 font-14">Package</div>
+								<div class="weight-600 font-14">Refferals</div>
 							</div>
 						</div>
 					</div>

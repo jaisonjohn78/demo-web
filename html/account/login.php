@@ -6,7 +6,7 @@ if (isset($_POST["login"])) {
     $email = mysqli_real_escape_string($conn, $_POST["email"]);
     $password = mysqli_real_escape_string($conn, md5($_POST["password"]));
   
-    $check_email = mysqli_query($conn, "SELECT * FROM `master_user_tb` WHERE email='$email' AND password='$password' AND status='0'");
+    $check_email = mysqli_query($conn, "SELECT * FROM `master_user_tb` WHERE email='$email' AND password='$password'");
     $payment_check = mysqli_query($conn, "SELECT id FROM `master_user_tb` WHERE payment='pending'");
     
 
@@ -15,7 +15,9 @@ if (isset($_POST["login"])) {
     if (mysqli_num_rows($check_email) > 0) {
     $row = mysqli_fetch_assoc($check_email);
     session_start();
-    $id = $_SESSION["user_id"];
+    $_SESSION["user_id"] = $row["id"];
+    include '../includes/auth.php';
+    echo $_SESSION["user_id"];
     echo "<script>window.location.href = 'upload.php';</script>";
 
 
